@@ -28,17 +28,27 @@ export default class HomePresenter {
   }
 
   _initMap(stories) {
+    // Hapus peta sebelumnya
     if (this._map) {
       this._map.remove();
     }
 
-    this._map = L.map(this._mapContainerId).setView([-6.2, 106.8], 10);
+    // Pastikan elemen map tersedia
+    const mapElement = document.getElementById(this._mapContainerId);
+    if (!mapElement) {
+      console.warn('Elemen map tidak ditemukan');
+      return;
+    }
+
+    // Inisialisasi ulang map
+    this._map = L.map(mapElement).setView([-6.2, 106.8], 10);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap contributors',
     }).addTo(this._map);
 
-    stories.forEach(story => {
+    // Tambahkan marker
+    stories.forEach((story) => {
       if (story.lat && story.lon) {
         L.marker([story.lat, story.lon])
           .addTo(this._map)
