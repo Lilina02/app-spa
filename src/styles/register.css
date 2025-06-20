@@ -1,0 +1,93 @@
+:root {
+  --lilac-main: #c8a2c8;
+  --lilac-dark: #a278b5;
+  --lilac-glow: rgba(200, 162, 200, 0.2);
+  --neutral-bg: #f9f9f9;
+  --neutral-border: #ccc;
+  --text-dark: #333;
+  --text-gray: #444;
+}
+
+/* Halaman Pendaftaran */
+.register-page .container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.register-page h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  color: var(--text-dark);
+}
+
+.register-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-page label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-gray);
+}
+
+.register-page input {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--neutral-border);
+  font-size: 1rem;
+  background-color: var(--neutral-bg);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-page input:focus {
+  border-color: var(--lilac-main);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--lilac-glow);
+}
+
+.register-page button {
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--lilac-main);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register-page button:hover {
+  background-color: var(--lilac-dark);
+  transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .register-page .container {
+    padding: 1.5rem;
+  }
+
+  .register-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .register-page label {
+    font-size: 0.9rem;
+  }
+
+  .register-page input,
+  .register-page button {
+    font-size: 0.95rem;
+  }
+
+  .register-page form {
+    gap: 0.8rem;
+  }
+}

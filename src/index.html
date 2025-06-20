@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PWA Manifest & Favicon -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#005d8f" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+
+    <!-- Judul Halaman -->
+    <title>App Cerita</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha384-o88pClCmMytZbdxE1gnUJIPqBjTeR1N7xFMufJhBxIgOZbZQUMZyYjS0xgzIf2ML"
+      crossorigin=""
+    />
+
+    <!-- JS Module -->
+    <script type="module" src="/scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="main-header container">
+        <a class="brand-name" href="#/">Story App</a>
+        <button
+          id="drawer-button"
+          class="drawer-button"
+          aria-label="Toggle navigation menu"
+        >
+          ☰
+        </button>
+
+        <nav
+          id="navigation-drawer"
+          class="navigation-drawer"
+          role="navigation"
+          aria-label="Main menu"
+        >
+          <ul class="nav-list">
+            <li><a href="#/">Beranda</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/favorite">Favorit</a></li>
+            <li><a href="#/login" id="login-link">Login</a></li>
+            <li>
+              <button id="logout-button" style="display: none">Logout</button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+      <section>
+        <h1>Selamat datang di Aplikasi Cerita!</h1>
+        <p>Di sini, Anda dapat menemukan berbagai cerita menarik.</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Aplikasi Cerita</p>
+      </div>
+    </footer>
+  </body>
+</html>
