@@ -1,7 +1,7 @@
 :root {
-  --lilac-main: #C8A2C8;
-  --lilac-dark: #A278B5;
-  --lilac-soft: #E6CCF5;
+  --lilac-main: #c8a2c8;
+  --lilac-dark: #a278b5;
+  --lilac-soft: #e6ccf5;
   --error: #e74c3c;
   --success: #27ae60;
   --neutral-border: #ccc;
@@ -137,11 +137,16 @@
 }
 
 /* Map */
-.map-add {
-  height: 250px;
-  border: 2px solid var(--neutral-border);
-  margin-top: 1rem;
+.map-add,
+#map,
+.map-container {
+  height: 300px;
+  width: 100%;
   border-radius: 8px;
+  margin-top: 1.5rem;
+  border: 2px solid var(--neutral-border);
+  box-sizing: border-box;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Popup Kamera */
