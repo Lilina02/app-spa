@@ -136,18 +136,22 @@
   z-index: 1000;
 }
 
-/* Map */
-.map-add,
+/* Styling Map untuk semua halaman */
 #map,
-.map-container {
+.map-container,
+.map-add {
   height: 300px;
+  min-height: 300px;
   width: 100%;
   border-radius: 8px;
   margin-top: 1.5rem;
   border: 2px solid var(--neutral-border);
   box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
+
 
 /* Popup Kamera */
 .camera-modal {
